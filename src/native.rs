@@ -743,6 +743,11 @@ impl HasContext for Context {
         gl.DispatchComputeIndirect(offset as isize);
     }
 
+    unsafe fn point_size(&self, size: f32) {
+        let gl = &self.raw;
+        gl.PointSize(size as f32);
+    }
+
     unsafe fn draw_arrays(&self, mode: u32, first: i32, count: i32) {
         let gl = &self.raw;
         gl.DrawArrays(mode as u32, first, count);

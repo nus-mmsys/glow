@@ -332,6 +332,8 @@ pub trait HasContext {
 
     unsafe fn draw_arrays(&self, mode: u32, first: i32, count: i32);
 
+    unsafe fn point_size(&self, size: f32);
+
     unsafe fn draw_arrays_instanced(&self, mode: u32, first: i32, count: i32, instance_count: i32);
 
     unsafe fn draw_arrays_instanced_base_instance(
